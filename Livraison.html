@@ -23,48 +23,48 @@
 </head>
 <body class="bg-purelife-beige min-h-screen flex flex-col">
     <!-- Top Navigation Bar -->
-<header class="bg-purelife-gray py-4 px-4 shadow-sm">
+<header class="bg-purelife-gray py-6 px-6 shadow-md">
     <div class="container mx-auto flex justify-between items-center">
-        <!-- Logo - avec taille augmentée -->
+        <!-- Logo -  -->
         <div class="flex items-center">
-            <a href="#" class="text-purelife-green font-bold text-xl flex items-center">
-                <img src="assets/images/Logo.png" alt="PURELIFE Logo" class="h-10">
+            <a href="#" class="text-purelife-green font-bold text-2xl flex items-center">
+                <img src="assets/images/Logo.png" alt="PURELIFE Logo" class="h-12">
             </a>
         </div>
         
-        <!-- Search Bar - inchangé -->
+        <!-- Search Bar -  -->
         <div class="relative w-1/3">
-            <input type="text" class="w-full py-2 px-3 border border-gray-300 rounded-full bg-purelife-beige" />
-            <button class="absolute right-3 top-1/2 transform -translate-y-1/2">
-                <i class="fas fa-search text-gray-500"></i>
+            <input type="text" class="w-full py-3 px-4 border border-gray-300 rounded-full bg-purelife-beige text-base" />
+            <button class="absolute right-4 top-1/2 transform -translate-y-1/2">
+                <i class="fas fa-search text-gray-500 text-lg"></i>
             </button>
         </div>
         
-        <!-- Icons - avec taille légèrement augmentée -->
-        <div class="flex items-center space-x-5">
+        <!-- Icons -  -->
+        <div class="flex items-center space-x-6">
             <a href="#" class="text-gray-700"><i class="far fa-heart text-2xl"></i></a>
             <a href="#" class="text-gray-700"><i class="fas fa-user-circle text-2xl"></i></a>
             <a href="#" class="text-gray-700"><i class="fas fa-shopping-basket text-2xl"></i></a>
             <a href="#" class="text-gray-700 flex items-center">
-                <i class="far fa-clipboard-list text-2xl mr-1"></i>
-                <span class="bg-gray-200 rounded-full h-6 w-6 flex items-center justify-center text-xs">0</span>
+                <i class="far fa-clipboard-list text-2xl mr-2"></i>
+                <span class="bg-gray-200 rounded-full h-7 w-7 flex items-center justify-center text-sm">0</span>
             </a>
         </div>
     </div>
 </header>
     
     <!-- Main Navigation Menu -->
-    <nav class="bg-gray-300 text-gray-800">
-        <div class="container mx-auto">
-            <ul class="flex justify-between px-4">
-                <li class="py-2"><a href="#" class="hover:text-purelife-green">Accueil</a></li>
-                <li class="py-2"><a href="#" class="hover:text-purelife-green">Catégories</a></li>
-                <li class="py-2"><a href="#" class="hover:text-purelife-green">Nouveautés</a></li>
-                <li class="py-2"><a href="#" class="hover:text-purelife-green">à propos</a></li>
-                <li class="py-2"><a href="#" class="hover:text-purelife-green">Contactez-nous</a></li>
-            </ul>
-        </div>
-    </nav>
+<nav class="bg-black bg-opacity-20 text-gray-800">
+    <div class="container mx-auto">
+        <ul class="flex justify-between px-4">
+            <li class="py-2"><a href="#" class="hover:text-purelife-green">Accueil</a></li>
+            <li class="py-2"><a href="#" class="hover:text-purelife-green">Catégories</a></li>
+            <li class="py-2"><a href="#" class="hover:text-purelife-green">Nouveautés</a></li>
+            <li class="py-2"><a href="#" class="hover:text-purelife-green">à propos</a></li>
+            <li class="py-2"><a href="#" class="hover:text-purelife-green">Contactez-nous</a></li>
+        </ul>
+    </div>
+</nav>
     
     <!-- Breadcrumb -->
     <div class="container mx-auto px-4 py-2 text-sm text-gray-600">
@@ -73,8 +73,8 @@
     
     <!-- Main Content -->
     <main class="container mx-auto px-4 py-6 flex-grow">
-        <h1 class="text-2xl font-bold mb-2">Livraison</h1>
-        <p class="text-gray-600 mb-8">Entrez vos informations de livraison</p>
+        <h1 class="text-2xl font-bold mb-2">Details de Livraison</h1>
+        
        
         
 <!-- Map Section - CORRECTED -->
@@ -160,60 +160,37 @@
         </div>
     </div>
     
-    <!-- Social Media Section -->
-    <div class="bg-purelife-beige py-4">
-        <div class="container mx-auto px-4 flex justify-center">
-            <div class="flex space-x-4">
-                <a href="#" class="bg-gray-800 text-white h-8 w-8 rounded-full flex items-center justify-center">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="#" class="bg-gray-800 text-white h-8 w-8 rounded-full flex items-center justify-center">
-                    <i class="fab fa-youtube"></i>
-                </a>
-                <a href="#" class="bg-gray-800 text-white h-8 w-8 rounded-full flex items-center justify-center">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="#" class="bg-gray-800 text-white h-8 w-8 rounded-full flex items-center justify-center">
-                    <i class="fab fa-pinterest"></i>
-                </a>
-                <a href="#" class="bg-gray-800 text-white h-8 w-8 rounded-full flex items-center justify-center">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </div>
-        </div>
-    </div>
+    
     
     <!-- Footer Info Section -->
-    <div class="bg-purelife-gray py-6">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-wrap justify-around">
-                <div class="w-full md:w-1/3 flex flex-col items-center mb-4 md:mb-0">
-                    <div class="flex items-center justify-center mb-2">
-                        <i class="fas fa-truck text-2xl text-purelife-green"></i>
-                    </div>
-                    <p class="text-center text-sm">Livraison en 24h** (Hors confirmé)</p>
-                </div>
-                
-                <div class="w-full md:w-1/3 flex flex-col items-center mb-4 md:mb-0">
-                    <div class="flex items-center justify-center mb-2">
-                        <i class="fas fa-store text-2xl text-purelife-green"></i>
-                    </div>
-                    <p class="text-center text-sm">Ouvert tous les jours de 8h00 à 19h00</p>
-                </div>
-                
-                <div class="w-full md:w-1/3 flex flex-col items-center">
-                    <div class="flex items-center justify-center mb-2">
-                        <i class="fas fa-phone text-2xl text-purelife-green"></i>
-                    </div>
-                    <p class="text-center text-sm">Contactez-nous au +216 28 31 20 00</p>
-                </div>
-            </div>
+
+   <footer class="bg-purelife-gray py-4 px-4 shadow-sm">
+    <div class="flex justify-center gap-4 my-8">
+        <img class="w-10 h-10" src="assets/images/facebook.png" alt="Social 1" />
+        <img class="w-10 h-10" src="assets/images/yt.png" alt="Social 2" />
+        <img class="w-10 h-10" src="assets/images/twitter.png" alt="Social 3" />
+        <img class="w-10 h-10" src="assets/images/pinterest.png" alt="Social 4" />
+        <img class="w-10 h-10" src="assets/images/inst.png" alt="Social 5" />
+    </div>
+    <div class="w-[80%] max-w-[1111px] mx-auto bg-white rounded-3xl p-8 flex justify-around flex-wrap">
+        <div class="flex flex-col items-center m-5 text-center">
+            <img class="w-[60px] h-[60px] mb-4" src="assets/images/karhba.png" alt="Delivery Icon" />
+            <p class="text-sm font-inter font-medium max-w-[200px]">Livraison en 24h (**) Hors confinement</p>
+        </div>
+        <div class="flex flex-col items-center m-5 text-center">
+            <img class="w-[60px] h-[60px] mb-4" src="assets/images/open.png" alt="Hours Icon" />
+            <p class="text-sm font-inter font-medium max-w-[200px]">Ouvert tous les jours de 8h00 à 19h00</p>
+        </div>
+        <div class="flex flex-col items-center m-5 text-center">
+            <img class="w-[60px] h-[60px] mb-4" src="assets/images/tel.png" alt="Contact Icon" />
+            <p class="text-sm font-inter font-medium max-w-[200px]">Contactez-nous au +216 58 31 20 00</p>
         </div>
     </div>
     
-    <!-- Copyright -->
-    <footer class="bg-purelife-gray py-2 text-center text-sm">
-        <p>© 2025 - PureLife™</p>
-    </footer>
+ 
+    
+    <div class="w-full border-t border-white my-5"></div>
+    <div class="text-center text-black text-xl font-semibold py-2.5">© 2025 - PureLife™</div>
+</footer>
 </body>
 </html>
