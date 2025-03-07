@@ -2,6 +2,10 @@
 
 Ce projet est une intégration web responsive d'une maquette Figma pour un site web de produits bio nommé PureLife.
 
+## 🌱 Équipe
+
+- **Marwani Wael** - Responsable des écrans: À propos et Contactez-nous
+- **[Autres membres]** - Responsable des autres écrans
 
 ## 📋 Description du Projet
 
