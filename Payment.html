@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PureLife - Moyen de Paiement</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'purelife-green': '#2A6A39',
+                        'purelife-light-green': '#3E9653',
+                        'purelife-beige': '#F9F3E9',
+                        'purelife-gray': '#E4EFE7',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-purelife-beige min-h-screen flex flex-col">
+   <!-- Top Navigation Bar -->
+<header class="bg-purelife-gray py-6 px-6 shadow-md">
+    <div class="container mx-auto flex justify-between items-center">
+        <!-- Logo -  -->
+        <div class="flex items-center">
+            <a href="#" class="text-purelife-green font-bold text-2xl flex items-center">
+                <img src="assets/images/Logo.png" alt="PURELIFE Logo" class="h-12">
+            </a>
+        </div>
+        
+        <!-- Search Bar -  -->
+        <div class="relative w-1/3">
+            <input type="text" class="w-full py-3 px-4 border border-gray-300 rounded-full bg-purelife-beige text-base" />
+            <button class="absolute right-4 top-1/2 transform -translate-y-1/2">
+                <i class="fas fa-search text-gray-500 text-lg"></i>
+            </button>
+        </div>
+        
+        <!-- Icons -  -->
+        <div class="flex items-center space-x-6">
+            <a href="#" class="text-gray-700"><i class="far fa-heart text-2xl"></i></a>
+            <a href="#" class="text-gray-700"><i class="fas fa-user-circle text-2xl"></i></a>
+            <a href="#" class="text-gray-700"><i class="fas fa-shopping-basket text-2xl"></i></a>
+            <a href="#" class="text-gray-700 flex items-center">
+                <i class="far fa-clipboard-list text-2xl mr-2"></i>
+                <span class="bg-gray-200 rounded-full h-7 w-7 flex items-center justify-center text-sm">0</span>
+            </a>
+        </div>
+    </div>
+</header>
+    
+      <!-- Main Navigation Menu -->
+<nav class="bg-black bg-opacity-20 text-gray-800">
+    <div class="container mx-auto">
+        <ul class="flex justify-between px-4">
+            <li class="py-2"><a href="#" class="hover:text-purelife-green">Accueil</a></li>
+            <li class="py-2"><a href="#" class="hover:text-purelife-green">Catégories</a></li>
+            <li class="py-2"><a href="#" class="hover:text-purelife-green">Nouveautés</a></li>
+            <li class="py-2"><a href="#" class="hover:text-purelife-green">à propos</a></li>
+            <li class="py-2"><a href="#" class="hover:text-purelife-green">Contactez-nous</a></li>
+        </ul>
+    </div>
+</nav>
+    
+    <!-- Breadcrumb -->
+    <div class="container mx-auto px-4 py-2 text-sm text-gray-600">
+        <p>Accueil > Paiement</p>
+    </div>
+    
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-6 flex-grow">
+        <h1 class="text-2xl font-bold mb-2">Moyen de Paiement</h1>
+        <p class="text-gray-600 mb-8">Choisir votre méthode de paiement</p>
+        
+        <!-- Payment Form Section -->
+        <div class="bg-white rounded-lg shadow-md p-8 mb-10">
+            <div class="flex justify-between items-start mb-6">
+                <div class="flex items-center">
+                    <input type="radio" id="card" name="payment" checked class="mr-2">
+                    <label for="card" class="font-medium">Carte</label>
+                </div>
+                <div class="flex space-x-3">
+                    <img src="assets/images/visa.png" alt="Visa" class="h-8 w-auto" onerror="this.src='https://via.placeholder.com/50x30?text=Visa'">
+                    <img src="assets/images/mastercard.png" alt="Mastercard" class="h-8 w-auto" onerror="this.src='https://via.placeholder.com/50x30?text=MC'">
+                    <img src="assets/images/paypal.png" alt="PayPal" class="h-8 w-auto" onerror="this.src='https://via.placeholder.com/50x30?text=PayPal'">
+                </div>
+            </div>
+            
+            <form class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div>
+                        <label class="block text-sm mb-2 text-gray-600">Card Number</label>
+                        <input type="text" class="w-full p-3 border border-gray-300 rounded">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm mb-2 text-gray-600">Expiration</label>
+                        <input type="text" class="w-full p-3 border border-gray-300 rounded">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm mb-2 text-gray-600">CVVC</label>
+                        <input type="text" class="w-full p-3 border border-gray-300 rounded">
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm mb-2 text-gray-600">Country</label>
+                        <input type="text" class="w-full p-3 border border-gray-300 rounded">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm mb-2 text-gray-600">Zip</label>
+                        <input type="text" class="w-full p-3 border border-gray-300 rounded">
+                    </div>
+                </div>
+                
+                <div class="space-y-3">
+                    <div class="flex items-center">
+                        <input type="checkbox" id="save-payment" class="mr-2">
+                        <label for="save-payment" class="text-sm">Enregistrer le détail de paiement</label>
+                    </div>
+                    
+                    <div class="flex items-center">
+                        <input type="checkbox" id="cash-delivery" class="mr-2">
+                        <label for="cash-delivery" class="text-sm">Paiement espèces à la livraison</label>
+                    </div>
+                </div>
+                
+                <div class="flex justify-end space-x-4 mt-8">
+                    <button type="button" class="bg-purelife-green text-white px-6 py-2 rounded">Vérifier</button>
+                    <button type="button" class="bg-purelife-green text-white px-6 py-2 rounded" onclick="window.location.href='Livraison.html'">Retour</button>
+                </div>
+            </form>
+        </div>
+        
+        <!-- Payment Illustration -->
+        <div class="flex justify-center mb-10">
+            <img src="assets/images/Paiement.png" alt="Illustration de paiement" class="h-40 w-auto" onerror="this.src='https://via.placeholder.com/500x150?text=Payment+Illustration'">
+        </div>
+    </main>
+    
+    <!-- Newsletter Section -->
+    <div class="bg-purelife-green text-white py-3">
+        <div class="container mx-auto px-4 flex flex-wrap items-center justify-between">
+            <div class="flex items-center mb-2 md:mb-0">
+                <i class="far fa-envelope text-xl mr-2"></i>
+                <span>Inscrivez-vous à la newsletter</span>
+                <span class="ml-4 text-sm">...on vous apporte les dernières nouvelles !</span>
+            </div>
+            <div class="flex">
+                <input type="email" placeholder="votre@email.com" class="px-3 py-1 rounded-l">
+                <button class="bg-gray-200 text-gray-800 px-3 py-1 rounded-r">S'inscrire</button>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    <!-- Footer Info Section -->
+    <footer class="bg-purelife-gray py-4 px-4 shadow-sm">
+        <div class="flex justify-center gap-4 my-8">
+            <img class="w-10 h-10" src="assets/images/facebook.png" alt="Social 1" />
+            <img class="w-10 h-10" src="assets/images/yt.png" alt="Social 2" />
+            <img class="w-10 h-10" src="assets/images/twitter.png" alt="Social 3" />
+            <img class="w-10 h-10" src="assets/images/pinterest.png" alt="Social 4" />
+            <img class="w-10 h-10" src="assets/images/inst.png" alt="Social 5" />
+        </div>
+        <div class="w-[80%] max-w-[1111px] mx-auto bg-white rounded-3xl p-8 flex justify-around flex-wrap">
+            <div class="flex flex-col items-center m-5 text-center">
+                <img class="w-[60px] h-[60px] mb-4" src="assets/images/karhba.png" alt="Delivery Icon" />
+                <p class="text-sm font-inter font-medium max-w-[200px]">Livraison en 24h (**) Hors confinement</p>
+            </div>
+            <div class="flex flex-col items-center m-5 text-center">
+                <img class="w-[60px] h-[60px] mb-4" src="assets/images/open.png" alt="Hours Icon" />
+                <p class="text-sm font-inter font-medium max-w-[200px]">Ouvert tous les jours de 8h00 à 19h00</p>
+            </div>
+            <div class="flex flex-col items-center m-5 text-center">
+                <img class="w-[60px] h-[60px] mb-4" src="assets/images/tel.png" alt="Contact Icon" />
+                <p class="text-sm font-inter font-medium max-w-[200px]">Contactez-nous au +216 58 31 20 00</p>
+            </div>
+        </div>
+        
+     
+        
+        <div class="w-full border-t border-white my-5"></div>
+        <div class="text-center text-black text-xl font-semibold py-2.5">© 2025 - PureLife™</div>
+    </footer>
+    
+   
+</body>
+</html>
