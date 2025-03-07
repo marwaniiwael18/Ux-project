@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>À Propos - PureLife</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -21,7 +22,11 @@
                         btnDark: '#2C2C2C',
                         navHover: '#3E563E',
                         breadcrumbInactive: '#B0BEB4',
-                        searchBg: '#FFF5E0'
+                        searchBg: '#FFF5E0',
+                        'purelife-green': '#2A6A39',
+                        'purelife-light-green': '#3E9653',
+                        'purelife-beige': '#F9F3E9',
+                        'purelife-gray': '#E4EFE7',
                     },
                     fontFamily: {
                         'poppins': ['Poppins', 'sans-serif'],
@@ -33,103 +38,114 @@
         }
     </script>
 </head>
-<body class="font-poppins bg-white overflow-x-hidden">
-    <div class="w-full max-w-[1446px] mx-auto relative bg-white">
-        <!-- Header Section -->
-        <header class="w-full bg-primary border-b border-black">
-            <div class="w-full max-w-[1446px] mx-auto flex justify-between items-center px-[5%] py-4 flex-wrap md:flex-nowrap">
-                <img class="w-[180px] h-auto mx-auto md:mx-0" src="images/logo.png" alt="PureLife Logo" />
-                <div class="w-full md:w-[40%] relative mx-auto my-5 md:my-0">
-                    <input type="text" placeholder="Rechercher..." class="w-full h-[54px] bg-searchBg rounded-full border border-black py-2 px-10">
-                    <img src="images/search.png" alt="Search" class="absolute right-4 top-1/2 transform -translate-y-1/2 w-6 h-6">
-                </div>
-                <div class="flex gap-5 items-center mx-auto md:mx-0">
-                    <img class="w-10 h-10 hover:scale-110 transition-transform duration-300 cursor-pointer" src="images/love.png" alt="Icon 2" />
-                    <img class="w-10 h-10 hover:scale-110 transition-transform duration-300 cursor-pointer" src="images/16-1.png" alt="Icon 3" />
-                    <img class="w-10 h-10 hover:scale-110 transition-transform duration-300 cursor-pointer" src="images/61x47.png" alt="Icon 4" />
-                    <img class="w-10 h-10 hover:scale-110 transition-transform duration-300 cursor-pointer" src="images/57x58.png" alt="Icon 5" />
-                </div>
+<body class="bg-purelife-beige min-h-screen flex flex-col">
+    <!-- Top Navigation Bar -->
+    <header class="bg-purelife-gray py-6 px-6 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <a href="#" class="text-purelife-green font-bold text-2xl flex items-center">
+                    <img src="assets/images/Logo.png" alt="PURELIFE Logo" class="h-12">
+                </a>
             </div>
-            <!-- Updated navigation to match the screenshot and be consistent with other pages -->
-            <nav class="w-full bg-secondary flex justify-center items-center border-t border-black">
-                <a href="#" class="text-black text-base md:text-xl font-semibold hover:text-lightGreen hover:underline px-4 md:px-8 py-4">Acceuil</a>
-                <a href="#" class="text-black text-base md:text-xl font-semibold hover:text-lightGreen hover:underline px-4 md:px-8 py-4">Catégories</a>
-                <a href="#" class="text-black text-base md:text-xl font-semibold hover:text-lightGreen hover:underline px-4 md:px-8 py-4">Nouveautés</a>
-                <a href="#" class="text-black text-base md:text-xl font-semibold hover:text-lightGreen hover:underline px-4 md:px-8 py-4">à propos</a>
-                <a href="#" class="text-black text-base md:text-xl font-semibold hover:text-lightGreen hover:underline px-4 md:px-8 py-4">Contactez-nous</a>
-            </nav>
-        </header>
+            
+            <!-- Search Bar -->
+            <div class="relative w-1/3">
+                <input type="text" placeholder="Rechercher..." class="w-full py-3 px-4 border border-gray-300 rounded-full bg-purelife-beige text-base" />
+                <button class="absolute right-4 top-1/2 transform -translate-y-1/2">
+                    <img src="images/search.png" alt="Search" class="w-6 h-6">
+                </button>
+            </div>
+            
+            <!-- Icons -->
+            <div class="flex items-center space-x-6">
+                <a href="#" class="text-gray-700"><img class="w-10 h-10" src="images/love.png" alt="Icon 2" /></a>
+                <a href="#" class="text-gray-700"><img class="w-10 h-10" src="images/16-1.png" alt="Icon 3" /></a>
+                <a href="#" class="text-gray-700"><img class="w-10 h-10" src="images/61x47.png" alt="Icon 4" /></a>
+                <a href="#" class="text-gray-700"><img class="w-10 h-10" src="images/57x58.png" alt="Icon 5" /></a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Main Navigation Menu -->
+    <nav class="bg-black bg-opacity-20 text-gray-800">
+        <div class="container mx-auto">
+            <ul class="flex justify-between px-4">
+                <li class="py-2"><a href="index.html" class="hover:text-purelife-green">Accueil</a></li>
+                <li class="py-2"><a href="Categories.html" class="hover:text-purelife-green">Catégories</a></li>
+                <li class="py-2"><a href="Nouveautes.html" class="hover:text-purelife-green">Nouveautés</a></li>
+                <li class="py-2"><a href="Apropos.html" class="hover:text-purelife-green font-semibold text-purelife-green">à propos</a></li>
+                <li class="py-2"><a href="Contacter-nous.html" class="hover:text-purelife-green">Contactez-nous</a></li>
+            </ul>
+        </div>
+    </nav>
 
-        <!-- Breadcrumbs -->
-        <div class="px-[5%] py-5 mt-5">
-            <span class="text-breadcrumbInactive text-lg font-roboto">Acceuil </span>
-            <span class="text-black text-lg font-roboto">/ À propos</span>
+    <!-- Breadcrumbs -->
+    <div class="container mx-auto px-4 py-2 text-sm text-gray-600">
+        <p>Accueil > À propos</p>
+    </div>
+
+    <!-- Main Section -->
+    <section class="w-full bg-accent py-16">
+        <h1 class="text-center text-black text-2xl md:text-4xl font-bold mb-10">À Propos de Nous</h1>
+
+        <!-- Mission Section -->
+        <div class="w-[90%] max-w-[1000px] p-10 md:p-10 mx-auto my-8 bg-formBg rounded-lg shadow-md">
+            <h2 class="text-center text-lightGreen text-xl md:text-2xl font-semibold mb-5">Notre Mission</h2>
+            <p class="text-black text-base md:text-xl leading-relaxed text-center px-0 md:px-5">
+                Nous nous engageons à fournir des produits bio de haute qualité pour une vie plus saine.
+            </p>
         </div>
 
-        <!-- Main Section -->
-        <section class="w-full bg-accent py-16">
-            <h1 class="text-center text-black text-2xl md:text-4xl font-bold mb-10">À Propos de Nous</h1>
+        <!-- History Section -->
+        <div class="w-full py-12 md:py-14 px-5 md:px-10 bg-formBg my-8">
+            <h2 class="text-center text-lightGreen text-xl md:text-2xl font-semibold mb-5">Notre Histoire</h2>
+            <p class="max-w-[800px] text-black text-base md:text-xl leading-relaxed text-center mx-auto">
+                Depuis notre création, nous avons mis un point d'honneur à sélectionner les meilleurs produits naturels et à garantir une transparence totale sur leur provenance.
+            </p>
+        </div>
+    </section>
 
-            <!-- Mission Section -->
-            <div class="w-[90%] max-w-[1000px] p-10 md:p-10 mx-auto my-8 bg-formBg rounded-lg shadow-md">
-                <h2 class="text-center text-lightGreen text-xl md:text-2xl font-semibold mb-5">Notre Mission</h2>
-                <p class="text-black text-base md:text-xl leading-relaxed text-center px-0 md:px-5">
-                    Nous nous engageons à fournir des produits bio de haute qualité pour une vie plus saine.
-                </p>
+    <!-- Newsletter Section -->
+    <div class="bg-purelife-green text-white py-3">
+        <div class="container mx-auto px-4 flex flex-wrap items-center justify-between">
+            <div class="flex items-center mb-2 md:mb-0">
+                <i class="far fa-envelope text-xl mr-2"></i>
+                <span>Inscrivez-vous à la newsletter</span>
+                <span class="ml-4 text-sm">...on vous apporte les dernières nouvelles !</span>
             </div>
-
-            <!-- History Section -->
-            <div class="w-full py-12 md:py-14 px-5 md:px-10 bg-formBg my-8">
-                <h2 class="text-center text-lightGreen text-xl md:text-2xl font-semibold mb-5">Notre Histoire</h2>
-                <p class="max-w-[800px] text-black text-base md:text-xl leading-relaxed text-center mx-auto">
-                    Depuis notre création, nous avons mis un point d'honneur à sélectionner les meilleurs produits naturels et à garantir une transparence totale sur leur provenance.
-                </p>
+            <div class="flex">
+                <input type="email" placeholder="votre@email.com" class="px-3 py-1 rounded-l">
+                <button class="bg-gray-200 text-gray-800 px-3 py-1 rounded-r">S'inscrire</button>
             </div>
-        </section>
-
-        <!-- Newsletter Section -->
-        <section class="w-full bg-darkGreen py-5 px-[5%] flex flex-wrap items-center justify-between">
-            <div class="flex items-center w-full md:w-auto mx-auto md:mx-0 justify-center mb-5 md:mb-0">
-                <img src="images/Vector.png" alt="Newsletter Icon" class="w-10 h-auto mr-4">
-                <div class="text-white">
-                    <h3 class="text-xl font-semibold">Inscrivez-vous à la newsletter</h3>
-                    <p class="text-base mt-1">...on vous apporte les dernières nouvelles !</p>
-                </div>
-            </div>
-            <form class="flex gap-2.5 w-full md:w-auto mx-auto md:mx-0 justify-center md:justify-start flex-wrap md:flex-nowrap">
-                <input type="email" class="py-3 px-4 rounded-lg border-none min-w-[250px] w-full md:w-auto max-w-[300px]" placeholder="you@example.com" required>
-                <button type="submit" class="py-3 px-6 bg-white text-darkGreen font-semibold border-none rounded-lg cursor-pointer hover:bg-gray-100 transition-colors duration-300 w-full md:w-auto max-w-[300px] mt-4 md:mt-0">Submit</button>
-            </form>
-        </section>
-
-        <!-- Footer Section -->
-        <footer class="w-full bg-primary py-10 relative">
-            <div class="w-[80%] max-w-[1111px] mx-auto bg-white rounded-3xl p-8 flex justify-around flex-wrap">
-                <div class="flex flex-col items-center m-5 text-center">
-                    <img class="w-[60px] h-[60px] mb-4" src="images/karhba.png" alt="Delivery Icon" />
-                    <p class="text-sm font-inter font-medium max-w-[200px]">Livraison en 24h (**) Hors confinement</p>
-                </div>
-                <div class="flex flex-col items-center m-5 text-center">
-                    <img class="w-[60px] h-[60px] mb-4" src="images/open.png" alt="Hours Icon" />
-                    <p class="text-sm font-inter font-medium max-w-[200px]">Ouvert tous les jours de 8h00 à 19h00</p>
-                </div>
-                <div class="flex flex-col items-center m-5 text-center">
-                    <img class="w-[60px] h-[60px] mb-4" src="images/tel.png" alt="Contact Icon" />
-                    <p class="text-sm font-inter font-medium max-w-[200px]">Contactez-nous au +216 58 31 20 00</p>
-                </div>
-            </div>
-            
-            <div class="flex justify-center gap-4 my-8">
-                <img class="w-10 h-10" src="images/facebook.png" alt="Social 1" />
-                <img class="w-10 h-10" src="images/yt.png" alt="Social 2" />
-                <img class="w-10 h-10" src="images/twitter.png" alt="Social 3" />
-                <img class="w-10 h-10" src="images/pinterest.png" alt="Social 4" />
-                <img class="w-10 h-10" src="images/inst.png" alt="Social 5" />
-            </div>
-            
-            <div class="w-full border-t border-white my-5"></div>
-            <div class="text-center text-black text-xl font-semibold py-2.5">© 2025 - PureLife™</div>
-        </footer>
+        </div>
     </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-purelife-gray py-4 px-4 shadow-sm">
+        <div class="flex justify-center gap-4 my-8">
+            <img class="w-10 h-10" src="images/facebook.png" alt="Social 1" />
+            <img class="w-10 h-10" src="images/yt.png" alt="Social 2" />
+            <img class="w-10 h-10" src="images/twitter.png" alt="Social 3" />
+            <img class="w-10 h-10" src="images/pinterest.png" alt="Social 4" />
+            <img class="w-10 h-10" src="images/inst.png" alt="Social 5" />
+        </div>
+        <div class="w-[80%] max-w-[1111px] mx-auto bg-white rounded-3xl p-8 flex justify-around flex-wrap">
+            <div class="flex flex-col items-center m-5 text-center">
+                <img class="w-[60px] h-[60px] mb-4" src="images/karhba.png" alt="Delivery Icon" />
+                <p class="text-sm font-inter font-medium max-w-[200px]">Livraison en 24h (**) Hors confinement</p>
+            </div>
+            <div class="flex flex-col items-center m-5 text-center">
+                <img class="w-[60px] h-[60px] mb-4" src="images/open.png" alt="Hours Icon" />
+                <p class="text-sm font-inter font-medium max-w-[200px]">Ouvert tous les jours de 8h00 à 19h00</p>
+            </div>
+            <div class="flex flex-col items-center m-5 text-center">
+                <img class="w-[60px] h-[60px] mb-4" src="images/tel.png" alt="Contact Icon" />
+                <p class="text-sm font-inter font-medium max-w-[200px]">Contactez-nous au +216 58 31 20 00</p>
+            </div>
+        </div>
+        <div class="w-full border-t border-white my-5"></div>
+        <div class="text-center text-black text-xl font-semibold py-2.5">© 2025 - PureLife™</div>
+    </footer>
 </body>
 </html>
